@@ -1,0 +1,150 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  padding: 1rem;
+}
+
+.banking-ui {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.balance {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  flex: 1 1 45%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deposit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.deposit:hover {
+  background-color: #45a045;
+}
+
+.withdraw {
+  background-color: #f44336;
+  color: white;
+}
+
+.withdraw:hover {
+  background-color: #d9372c;
+}
+
+@media (max-width: 480px) {
+  .buttons button {
+    flex: 1 1 100%;
+  }
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #3949ab;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(40, 53, 147, 0.08);
+    padding: 32px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #1a237e;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.account-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.account-card {
+    background: #e8eaf6;
+    padding: 16px 24px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(40, 53, 147, 0.06);
+    width: 48%;
+}
+
+.account-card h3 {
+    margin: 0 0 8px 0;
+    color: #283593;
+    font-size: 1.1rem;
+}
+
+.account-card p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+.button {
+    background-color: #3949ab;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background-color: #5c6bc0;
+}
