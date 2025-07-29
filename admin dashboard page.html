@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <style>
+    :root {
+      --green: #4CAF50;
+      --sidebar-bg: #f2f2f2;
+      --bg-light: #ffffff;
+      --text-light: #000000;
+      --bg-dark: #1e1e1e;
+      --text-dark: #f0f0f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 60px 1fr 30px;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    header {
+      grid-area: header;
+      background-color: var(--green);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      font-weight: bold;
+    }
+
+    .theme-switch {
+      font-size: 0.9rem;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: var(--sidebar-bg);
+      padding: 10px;
+    }
+
+    aside a {
+      display: block;
+      margin: 8px 0;
+      text-decoration: none;
+      color: purple;
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      background-color: var(--bg-light);
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: var(--green);
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 30px;
+    }
+
+    /* Dark Mode */
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark .dashboard {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark aside {
+      background-color: #333;
+    }
+
+    body.dark header,
+    body.dark footer {
+      background-color: #222;
+    }
+
+    body.dark aside a {
+      color: #9ecfff;
+    }
+
+    body.dark main {
+      background-color: #1e1e1e;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <div>Admin Dashboard</div>
+      <label class="theme-switch">
+        <input type="checkbox" onchange="toggleTheme()"> Dark Mode
+      </label>
+    </header>
+
+    <aside>
+      <a href="#">Home</a>
+      <a href="#">Users</a>
+      <a href="#">Settings</a>
+    </aside>
+
+    <main>
+      <h3><strong>Welcome, Admin!</strong></h3>
+      <p>This is the main content area. Add charts, tables, or reports here.</p>
+    </main>
+
+    <footer>
+      © 2025 Admin Panel
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
